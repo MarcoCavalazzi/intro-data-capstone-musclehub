@@ -49,6 +49,6 @@ purchases.to_sql('purchases', conn, dtype={
 def sql_query(query):
     try:
         df = pd.read_sql(query, conn)
-    except e:
+    except Exception as e:
         print (e.message)
     return df
